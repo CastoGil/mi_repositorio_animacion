@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+/*Pagina Principal index.html*/
+
+.fondo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./imagen/14139.jpg);
+}
+.gris{
+   
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "encabezado encabezado"
+    "presentacion presentacion"
+    "footer footer"
+}
+
+.encabezado{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    padding: 1.5rem;
+    grid-area: encabezado;
+    
+    
+}
+
+.menu li{
+    display: inline-block;
+    font-size: 1.5rem; 
+    margin: 18px 20px;
+    list-style: none;
+    position: relative;
+    font-family: 'Bree Serif', serif;
+    
+}
+ul ul{
+    position:absolute;
+    display: none;
+}
+ul ul li{
+    display: block;
+    
+}
+ul li:hover ul{
+    display: block;
+    background-color: black;
+    z-index: 1;
+    border-radius: 10px;
+    
+}
+h1{
+    color: rgb(0, 255, 0);
+    font-family: 'Bree Serif', serif;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+}
+a:hover{
+    color: rgb(0, 250, 0);
+    
+}
+.menu li:hover{
+    transform: translate(8px, 15px);
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+ul li:hover ul{
+    display: block;
+    
+}
+
+h3{
+    color: white;
+}
+
+.presentacion{
+    color: white;
+    text-align:left;
+    padding: 11rem;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-area:presentacion;
+
+}
+
+/*Diseño para cada pagina del footer*/
+footer{
+    margin: 0 0 20px 20px;
+    text-align: left;
+   padding: 1.5rem;
+   grid-area: footer;
+}
+
+.redes ul li{
+    display: inline;
+    font-size: 2rem;
+    list-style: none;
+    flex-direction: row;
+}
+.redes:hover{
+    color: rgb(0, 255, 0);
+}
+/*Contacto.html*/
+.logo2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+.contacto h1{
+    color: rgb(0, 255, 0);
+    font-family: 'Bree Serif', serif;
+}
+.informacion{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2rem;
+    font-size: 1.2rem;
+    text-align: center
+}
+.fondo2{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./imagen/14150.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+.contactos{
+    
+    font-family: 'Bree Serif', serif;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-align:left;
+}
+/**CriptomonedasBtc**/
+.contenedor{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "bitcoin bitcoin"
+    "info info"
+    "footer footer";
+}
+.img2{
+    background-image: url(./imagen/bitcoin-oro-tierra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.Bitcoin{
+    grid-area: bitcoin;
+}
+.info{
+    grid-area: info;
+}
+
+
+.titulo h2{
+    font-size: 2.5rem;
+   color: white;
+   text-align: center;
+   font-family: 'Bree Serif', serif;
+}
+.subti{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Bree Serif', serif;
+}
+.contenido{
+    color: white;
+    font-family: 'Bree Serif', serif;
+    padding: 1rem;
+    
+}
+main p{
+    color: white;
+    text-align: justify;
+    padding: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+/**responsive html**/
+@media screen and (max-width: 768px){
+    .encabezado{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .encabezado h1{
+        font-size: 3rem;
+    }
+    .menu li{
+       display: list-item;
+       padding-right: 280px;
+    }
+    nav{
+        padding-top: 40px;
+    }
+    nav ul ul li{
+        padding-left: 30px;
+       
+    }
+    .gris{
+        grid-template-areas: 
+        "encabezado"
+        "presentacion"
+        "footer";
+    }
+}
+    
+  
